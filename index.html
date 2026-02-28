@@ -6,74 +6,137 @@
 
 <title>Balaji Wagdale | Senior QA Automation Engineer</title>
 
-<meta name="description" content="Balaji Wagdale - Senior QA Automation Engineer with 7.5+ years experience in Selenium, Playwright, API Testing, SQL Validation and CI/CD in Banking & Financial Services.">
-<meta name="keywords" content="Senior QA Engineer, Selenium Java, Playwright, TestNG, API Testing, JMeter, SQL Validation, Banking QA, Trade Finance Testing">
+<meta name="description" content="Senior QA Automation Engineer with 7.5+ years in Selenium, Playwright, API Testing, SQL and CI/CD within Banking & Financial Services.">
+<meta name="keywords" content="QA Automation Engineer, Selenium Java, Playwright, TestNG, Banking QA, API Testing, JMeter, SQL">
 <meta name="author" content="Balaji Wagdale">
 
 <style>
-* { margin:0; padding:0; box-sizing:border-box; font-family:Arial, sans-serif; }
-body { line-height:1.6; color:#333; }
+:root {
+  --primary:#2a5298;
+  --accent:#ff9800;
+  --bg:#ffffff;
+  --text:#333;
+}
 
-header {
-  background: linear-gradient(135deg,#1e3c72,#2a5298);
+body.dark {
+  --bg:#121212;
+  --text:#f5f5f5;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Segoe UI, sans-serif;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  transition:0.3s ease;
+}
+
+header{
+  background:linear-gradient(135deg,#1e3c72,#2a5298);
   color:white;
   text-align:center;
-  padding:100px 20px;
-}
-header h1 { font-size:42px; margin-bottom:10px; }
-header p { font-size:20px; margin-bottom:20px; }
-.btn {
-  background:#ff9800;
-  color:white;
-  padding:12px 25px;
-  text-decoration:none;
-  border-radius:5px;
-  font-weight:bold;
+  padding:120px 20px;
+  position:relative;
 }
 
-section {
-  padding:60px 20px;
+header h1{
+  font-size:42px;
+  animation:fadeIn 1.2s ease-in-out;
+}
+
+header p{
+  font-size:20px;
+  margin:15px 0;
+}
+
+.btn{
+  display:inline-block;
+  margin:10px;
+  padding:12px 25px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+  background:var(--accent);
+  color:white;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.05);
+}
+
+.toggle{
+  position:absolute;
+  top:20px;
+  right:20px;
+  background:white;
+  color:black;
+  padding:8px 15px;
+  border-radius:20px;
+  cursor:pointer;
+  font-size:14px;
+}
+
+section{
+  padding:70px 20px;
   max-width:1100px;
   margin:auto;
 }
 
-h2 {
+h2{
   text-align:center;
   margin-bottom:40px;
-  color:#2a5298;
+  color:var(--primary);
 }
 
-.grid {
+.grid{
   display:grid;
-  gap:20px;
+  gap:25px;
 }
-.grid-3 {
+
+.grid-3{
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 }
 
-.card {
-  background:#f4f4f4;
-  padding:20px;
+.card{
+  background:rgba(255,255,255,0.1);
+  backdrop-filter:blur(10px);
+  border-radius:12px;
+  padding:25px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.1);
+  transition:0.3s;
+  animation:fadeUp 0.8s ease forwards;
+}
+
+body.dark .card{
+  background:rgba(255,255,255,0.05);
+}
+
+.card:hover{
+  transform:translateY(-8px);
+}
+
+img.project-img{
+  width:100%;
   border-radius:8px;
+  margin-bottom:10px;
 }
 
-footer {
-  background:#111;
-  color:white;
-  text-align:center;
-  padding:20px;
-}
-
-form input, form textarea {
+form input, form textarea{
   width:100%;
   padding:12px;
   margin-bottom:15px;
-  border:1px solid #ccc;
   border-radius:5px;
+  border:1px solid #ccc;
 }
 
-form button {
-  background:#2a5298;
+form button{
+  background:var(--primary);
   color:white;
   border:none;
   padding:12px 20px;
@@ -81,7 +144,14 @@ form button {
   cursor:pointer;
 }
 
-.whatsapp {
+footer{
+  background:#111;
+  color:white;
+  text-align:center;
+  padding:25px;
+}
+
+.whatsapp{
   position:fixed;
   bottom:20px;
   right:20px;
@@ -93,9 +163,18 @@ form button {
   text-decoration:none;
 }
 
+@keyframes fadeIn{
+  from{opacity:0;}
+  to{opacity:1;}
+}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
 @media(max-width:768px){
   header h1{font-size:28px;}
-  header p{font-size:16px;}
 }
 </style>
 </head>
@@ -103,17 +182,19 @@ form button {
 <body>
 
 <header>
+<div class="toggle" onclick="toggleMode()">🌙 Dark Mode</div>
 <h1>Balaji Wagdale</h1>
-<p>Senior QA Automation Engineer | Selenium | Playwright | Banking & Trade Finance</p>
-<a href="#contact" class="btn">Let’s Work Together</a>
+<p>Senior QA Automation Engineer | Banking & Trade Finance Specialist</p>
+<a href="#contact" class="btn">Hire Me</a>
+<a href="Balaji_Wagdale_Resume.pdf" class="btn" download>Download Resume</a>
 </header>
 
 <section>
 <h2>Professional Summary</h2>
 <p>
-Senior QA Analyst with 7.5+ years of experience in Automation and Functional Testing within Banking and Financial Services.
-Specialized in Selenium (Java) and Playwright (JavaScript) framework development using Hybrid and Page Object Model (POM).
-Experienced in API validation, SQL backend testing, and Jenkins CI/CD integration.
+7.5+ years of experience in Automation & Functional Testing in Banking & Financial Services.
+Specialized in Selenium (Java) and Playwright (JavaScript) frameworks, API validation,
+SQL backend testing and Jenkins CI/CD integration.
 </p>
 </section>
 
@@ -122,68 +203,56 @@ Experienced in API validation, SQL backend testing, and Jenkins CI/CD integratio
 <div class="grid grid-3">
 <div class="card">
 <h3>Automation</h3>
-<p>Selenium WebDriver (Java)<br>Playwright (JavaScript)<br>TestNG (Hybrid & POM)<br>Parallel Execution<br>Cross-Browser Testing</p>
+<p>Selenium, Playwright, TestNG, Hybrid Framework, POM, Parallel Execution</p>
 </div>
 <div class="card">
 <h3>API & Backend</h3>
-<p>Postman API Testing<br>Apache JMeter<br>SQL Database Validation<br>Integration Testing</p>
+<p>Postman, JMeter, SQL Validation, Integration Testing</p>
 </div>
 <div class="card">
-<h3>Tools & DevOps</h3>
-<p>Jenkins CI/CD<br>Git Version Control<br>Jira Defect Tracking<br>Agile Methodology</p>
+<h3>DevOps</h3>
+<p>Jenkins CI/CD, Git, Agile, Jira</p>
 </div>
 </div>
 </section>
 
 <section>
-<h2>Professional Experience</h2>
-
-<div class="card">
-<h3>Maveric Systems Limited (2025–Present)</h3>
-<p>Senior QA Analyst – Client: Citibank (Trade Finance)</p>
-<ul>
-<li>Designed scalable Playwright automation framework</li>
-<li>Automated 300+ trade finance scenarios</li>
-<li>Reduced regression time by 35%</li>
-<li>Integrated automation with Jenkins CI/CD</li>
-</ul>
-</div>
-
-<br>
-
-<div class="card">
-<h3>Candy Technologies Pvt. Ltd. (2018–2025)</h3>
-<p>Senior QA Analyst – Client: Barclays (Asset Management)</p>
-<ul>
-<li>Built Selenium Hybrid Automation Framework</li>
-<li>Automated 250+ portfolio & trade scenarios</li>
-<li>Increased automation coverage 40% → 80%</li>
-<li>Reduced manual regression by 60%</li>
-</ul>
-</div>
-
-</section>
-
-<section>
-<h2>Key Projects</h2>
-
+<h2>Featured Projects</h2>
 <div class="grid grid-3">
 <div class="card">
-<h3>Citi Global Trade Operations Platform</h3>
-<p>End-to-end trade finance automation including LC issuance, amendments and approval workflows with API and SQL validation.</p>
+<img src="https://via.placeholder.com/400x200" class="project-img">
+<h3>Citi GTOP</h3>
+<p>Trade finance automation covering LC issuance and approval workflows.</p>
 </div>
-
 <div class="card">
-<h3>Barclays Asset Management Platform</h3>
-<p>Automation of portfolio lifecycle, NAV calculation, compliance and trade execution modules.</p>
+<img src="https://via.placeholder.com/400x200" class="project-img">
+<h3>Barclays GAMP</h3>
+<p>Portfolio lifecycle automation & backend validation.</p>
 </div>
-
 <div class="card">
+<img src="https://via.placeholder.com/400x200" class="project-img">
 <h3>Automation Leadership</h3>
-<p>Mentored junior QA engineers, improved framework stability, and enhanced reporting mechanisms.</p>
+<p>Mentored QA engineers & optimized regression execution by 35%.</p>
 </div>
 </div>
+</section>
 
+<section>
+<h2>Blog & Insights</h2>
+<div class="grid grid-3">
+<div class="card">
+<h3>How to Design a Hybrid Automation Framework</h3>
+<p>Best practices for scalable Selenium framework architecture.</p>
+</div>
+<div class="card">
+<h3>Playwright vs Selenium in Banking Projects</h3>
+<p>Performance and reliability comparison in enterprise systems.</p>
+</div>
+<div class="card">
+<h3>CI/CD Integration for QA Automation</h3>
+<p>How Jenkins improves regression efficiency.</p>
+</div>
+</div>
 </section>
 
 <section id="contact">
@@ -193,7 +262,6 @@ Experienced in API validation, SQL backend testing, and Jenkins CI/CD integratio
 <input type="text" name="name" placeholder="Your Name" required>
 <input type="email" name="email" placeholder="Your Email" required>
 <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-
 <input type="hidden" name="_captcha" value="false">
 <button type="submit">Send Message</button>
 </form>
@@ -201,16 +269,21 @@ Experienced in API validation, SQL backend testing, and Jenkins CI/CD integratio
 <p><br>
 📧 wagdalebalaji@gmail.com<br>
 📱 +91 9096 575 857<br>
-🔗 LinkedIn: linkedin.com/in/balaji-wagdale-0ba78727
+🔗 linkedin.com/in/balaji-wagdale-0ba78727
 </p>
-
 </section>
 
 <footer>
-<p>© 2026 Balaji Wagdale | Senior QA Automation Engineer</p>
+© 2026 Balaji Wagdale | Senior QA Automation Engineer
 </footer>
 
 <a class="whatsapp" href="https://wa.me/919096575857" target="_blank">💬</a>
+
+<script>
+function toggleMode(){
+  document.body.classList.toggle("dark");
+}
+</script>
 
 </body>
 </html>
